@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* Estilos CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #b5f8af;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000; /* Cambiado a blanco para mejorar la visibilidad */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen */
+  min-height: 100vh; /* Asegura que el body ocupe al menos la altura de la ventana del navegador */
+  background-position: center center; /* Centra la imagen en ambos ejes */
+  background-attachment: fixed; /* Fija la imagen de fondo para evitar que se desplace al hacer scroll */
+}
+
+.content {
+  text-align: center;
+  background-color: #91c396; /* Fondo oscuro */
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%; /* Cambiado a porcentaje para ser responsive */
+  max-width: 900px;
+  margin: 20px auto; /* Centrando el contenedor */
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+  margin: 20px;
+  color: #fff;
+}
+
+h3 span {
+  color: #e88b7b; /* Color de resaltado */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Espaciado entre los contenedores */
+  margin-top: 20px;
+}
+
+.drop-area, .container2 {
+  flex: 1 1 calc(50% - 20px); /* Ajusta el tamaño y separación entre los contenedores */
+  margin: 10px; /* Espacio entre los contenedores */
+  border: 2px dashed #000000;
+  box-sizing: border-box;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.drop-area:hover {
+  scale: 0.995;
+  opacity: 0.6;
+  filter: brightness(0.5);
+}
+
+#form {
+  width: 100%; /* Cambiado a 100% para ser responsive */
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+form p {
+  color: #fff; /* Cambiado a blanco para mejorar la visibilidad */
+}
+
+.Btn {
+  background-color: #f1e6e6;
+  z-index: 2; /* Superpone en el index */
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 150px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.container2 {
+  overflow-y: auto;
+  max-height: 430px;
+}
+
+.btn-abrir-directorio {
+  background-color: #0730c5;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 10px; /* Alinea el botón con la parte inferior del contenedor */
+  right: 10px; /* Alinea el botón con el borde derecho del contenedor */
+  transition: background-color 0.3s ease;
+}
+
+.btn_delete {
+  border: 2px solid orange; /* Borde de 2px sólido naranja */
+  padding: 5px 10px; /* Ajuste del padding para mayor comodidad */
+  background: none; /* Fondo transparente */
+  color: orange; /* Texto naranja */
+  cursor: pointer;
+  border-radius: 5px; /* Borde redondeado */
+  transition: background-color 0.3s ease; /* Efecto de transición al pasar el ratón */
+}
+
+.btn_delete:hover {
+  background-color: rgba(255, 165, 0, 0.2); /* Cambio de color de fondo al pasar el ratón */
+}
+
+.archivos_subidos {
+  display: flex;
+  justify-content: space-between;
+  background: #dce3bf; /* Fondo oscuro */
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.archivos_subidos:hover {
+  box-shadow: 0 0 10px -2px #eee767;
+}
+
+.archivos_subidos div {
+  overflow: hidden;
+}
+
+.archivos_subidos a {
+  color: rgb(244, 123, 123); /* Cambia el color del texto a blanco */
+  font-size: 16px; /* Ajusta el tamaño del texto según tus preferencias */
+}
+
+.beta {
+  background: #d90a0a;
+  background: #3823da;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 0 12px;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .content {
+    width: 90%; /* Reducir el ancho para adaptarse a pantallas más pequeñas */
+  }
+
+  .container {
+    flex-direction: column; /* Cambiar a disposición de columna en dispositivos móviles */
+  }
+
+  .drop-area, .container2 {
+    flex: 1 1 100%; /* Ajusta el ancho al 100% en dispositivos móviles */
+    margin: 10px 0; /* Ajusta el margen para dispositivos móviles */
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
